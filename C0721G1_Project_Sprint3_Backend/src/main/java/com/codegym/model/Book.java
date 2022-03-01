@@ -31,6 +31,11 @@ public class Book {
     private List<User> users;
 
 
+    @ManyToOne(targetEntity = BookType.class)
+    @JoinColumn(name = "book_type_id", referencedColumnName = "id")
+    private BookType bookType;
+
+
     public Book() {
     }
 
